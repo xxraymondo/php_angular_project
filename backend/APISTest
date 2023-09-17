@@ -1,0 +1,48 @@
+//seeds
+php artisan db:seed --class=ProductSeeder
+
+//our collection of api && how to use
+
+http://localhost:8000/api/register
+
+{
+    "name": "Krrish",
+    "email": "justbegintoday@gmail.com",
+    "password": "codemaster",
+    "password_confirmation": "codemaster"
+}
+
+-------------------------
+http://localhost:8000/api/login
+{
+    "email":"<EMAIL>",
+    "password":"<PASSWORD>"  // password is <PASSWORD>
+}
+
+----------------------------------
+//Products  =CRUD
+http://localhost:8000/api/products
+//POST //get
+{
+             "name" : "test",
+            "description" : "test ",
+            "price" : 10,
+            "stock" : 100,
+            "image" : "test.png",
+            "category" : "paint",
+            "status": "active"
+
+}
+http://localhost:8000/api/products/id
+(put, delete)
+------------------------
+// Cart apis // must login first
+
+{
+  "quantity" : 1
+}
+
+
+(POsT)http://localhost:8000/api/cart/add/{productId}
+(get) http://localhost:8000/api/view-cart-items
+(Delete)http://localhost:8000/api/cart/empty
