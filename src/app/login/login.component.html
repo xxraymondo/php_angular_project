@@ -1,0 +1,45 @@
+
+		<section class="loginSection">
+		<section class="login">
+			<div class="login-box ">
+
+			  <h1>Login</h1>
+			  <form id="loginForm" [formGroup]="LoginForm" (ngSubmit)="getFormData(LoginForm)">
+				<div class="form-div">
+				  <label for="email">Email:</label>
+				  <input class="form-control" formControlName="email"  type="email" id="email" name="email" required>
+				</div>
+				<div class="password-input form-div">
+				  <label for="password">Password:</label>
+				  <input type="password" formControlName="password" class="form-control" id="password" name="password" required>
+				  <span class="password-toggle" onclick="togglePasswordVisibility()">
+					<i class="fa fa-eye" id="eye-icon" style="color: black;"></i>
+				  </span>
+				</div>
+				<button class="btn login-btn" type="submit">Login</button>
+			  </form>
+			  <div class="forgot-password">
+				<a href="forget-pw.html">Forgot Password?</a>
+			  </div>
+			  <div class="signup-link">
+				<p>Don't have an account? <a href="#">Sign up</a></p>
+			  </div>
+			</div>
+		  </section>
+
+		  <!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="d-flex">
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+
+  </section>
+

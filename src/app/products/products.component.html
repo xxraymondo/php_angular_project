@@ -1,0 +1,53 @@
+<div>
+  <section class="overAllContainer">
+    <div class="checkoutContainer">
+        <div class="billingInputsContainer">
+            <div class="row">
+
+                <!-- Billing Details -->
+                <div class="billing-details">
+                    <div class="section-title">
+                        <h3 class="title">product creation</h3>
+                    </div>
+                    <form  [formGroup]="ProductForm" (ngSubmit)="submitProduct(ProductForm)">
+                      <div class="itemInput" style="padding: 10px 0px;">
+                          <input class="input checkoutInput" style="padding: 20px 10px;" type="text"  formControlName="name"  placeholder="Name">
+                      </div>
+                      <div class="itemInput" style="padding: 10px 0px;">
+                          <input class="input checkoutInput"style="padding: 20px 10px;"  type="text"  formControlName="description"  placeholder="description">
+                      </div>
+                      <div class="itemInput" style="padding: 10px 0px;">
+                          <input class="input checkoutInput" style="padding: 20px 10px;"  type="number"  formControlName="price"  placeholder="price">
+                      </div>
+                      <div class="itemInput" style="padding: 10px 0px;">
+                          <input class="input checkoutInput" style="padding: 20px 10px;"  type="number"  formControlName="stock"  placeholder="stock">
+                      </div>
+                      <div class="itemInput" style="padding: 10px 0px;">
+                          <input class="input checkoutInput" style="padding: 20px 10px;"  type="text"  formControlName="image"  placeholder="image url">
+                      </div>
+                      <div class="itemInput" style="padding: 10px 0px;">
+                          <input class="input checkoutInput"style="padding: 20px 10px;"  type="text" formControlName="category"  placeholder="category">
+                      </div>
+                      <div class="itemInput" style="padding: 10px 0px;">
+                          <input class="input checkoutInput" style="padding: 20px 10px;"  type="text" formControlName="status"  placeholder="status">
+                      </div>
+
+                    <div class="add-to-cart" style="padding: 10px 20px;">
+                      <button type="submit"  class="cart-add-to-cart-btn " style="padding: 20px 10px;"  style="width: 100%;" >
+                        <i class="fa fa-shopping-cart"></i> create product
+                      </button>
+
+                    </div>
+                    </form>
+                </div>
+                <div id="errorSection" style="color: rgb(133, 10, 10);">
+
+                </div>
+                <!-- /Billing Details -->
+
+            </div>
+        </div>
+
+    </div>
+  </section>
+</div>

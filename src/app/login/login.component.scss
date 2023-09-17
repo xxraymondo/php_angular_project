@@ -1,0 +1,78 @@
+@import "../shared/sharedVaribales.scss";
+
+*{
+  margin-top: 0;margin-bottom: 0;
+  box-sizing: border-box;
+}
+section.login {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: $red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.login-btn{
+  background-color: $red;
+  color: $light-background-color;
+  font-size: 1.1rem;
+
+}
+.login-btn:hover{
+  box-shadow: 0 0px 15px $light-background-color;
+}
+.login-box {
+
+  width: 75%;
+  min-width: 400px;
+background-color: #1a1919;
+  padding: 20px 50px;
+  border-radius: 8px;
+  box-shadow: 0 0px 15px $red;
+}
+.btn{
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: solid 1px white;
+}
+.password-input {
+  position: relative;
+}
+.register-box .password-input {
+  position: relative;
+}
+.forgot-password,
+.signup-link {
+  text-align: center;
+  color: $silver!important;
+  text-decoration: none;
+}
+.forgot-password a{
+  color: $red!important;
+  text-decoration: none;
+}
+.signup-link a{
+  color: $red!important;
+  text-decoration: none;
+}
+.loginSection{
+  padding-top: 100px;
+}
+.register-box .signup-link {
+  text-align: center;
+}
+.form-control{
+  width: 100%;
+  padding: 5px;
+  border-radius: 7px;
+  border:1px solid #ccc;
+}
+.form-control:hover{
+  box-shadow: 0 0px 15px $light-background-color;
+}
+.form-div{
+  padding: 10px 0px;
+}

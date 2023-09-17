@@ -1,0 +1,252 @@
+
+@import "/src/app/shared/sharedVaribales.scss";
+
+@font-face {
+  font-family: "lato";
+  src: local("lato"), url(./assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+}
+a{
+  text-decoration: none;
+}
+.box-shadow-style{
+  box-shadow: 0 0px 15px $red;
+}
+
+$dark-background-color: #0D0D0D;
+$dark-color: #ffffff;
+
+$light-background-color: #ffffff;
+$light-color: #0D0D0D;
+$red:#D9415D;
+$blue:#2C96BF;
+$yellow:#F2A413;
+$musterd:#D97D0D;
+$white:#F2F2F2;
+$silver:#D9D9D9;
+$gray:#A6A6A6;
+$dark-gray:#595959;
+.text-red{
+  $red:#D9415D;
+}
+.background-red{
+  $red:#D9415D;
+}
+.text-blue{
+  $red:#2C96BF;
+}
+.background-blue{
+  $red:#2C96BF;
+}
+.text-yellow{
+  $red:#F2A413;
+}
+.background-yellow{
+  $red:#F2A413;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+
+.col-md-12
+ {position:relative;min-height:1px;padding-right:15px;padding-left:15px}
+
+ @media (min-width:992px)
+ {.col-md-12{float:left;width:100%}}
+
+
+
+
+body {
+  font-family: 'lato', 'arial', sans-serif;
+  font-size: 13px;
+ font-weight: 400;
+ color: $dark-color;
+ background-color: $dark-background-color;
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ text-transform :capitalize;
+}
+
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.d-flex {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.d-flex {
+  position: relative;
+}
+.header-search {
+  padding: 15px 0px;
+}
+.input-select {
+  padding: 0px 15px;
+  background: #FFF;
+  border: 0px solid #E4E7ED;
+  border-bottom: 1px solid #E4E7ED;
+  height: 39px;
+}
+.header-search form .input-select {
+  margin-right: -4px;
+  border-radius: 40px 0px 0px 40px;
+}
+
+.input {
+  height: 38px;
+  padding: 0px 15px;
+  border: 1px solid #E4E7ED;
+  background-color: #FFF;
+  width: 100%;
+  border-radius: 40px 0px 0px 40px;
+}
+.input:hover{
+  box-shadow: 0 0px 15px $light-background-color;
+
+}
+
+textarea.input {
+  padding: 15px;
+  min-height: 90px;
+}
+
+.header-search form .input {
+  width: calc(100% - 125px);
+  margin-right: -4px;
+}
+.header-search form .search-btn {
+  height: 40px;
+  width: 100px;
+  background: #049DD9;
+  color: #FFF;
+  font-weight: 700;
+  border: none;
+  border-radius: 0px 40px 40px 0px;
+}
+
+.navIcons{
+  flex: 0 0 auto;
+  width: 100%;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: white !important;
+}
+.NavIconsLeft{
+  margin-top: 20px;justify-content:space-evenly;
+}
+
+
+.menu-toggle {
+  display: none;
+}
+// .NavIcons{
+// //  font-size: 0.8rem;
+// //  color: white !important;
+// }
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px !important;
+  }
+  .col-md-6 {
+    width: 50%;
+    flex: 0 0 auto;
+}
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px !important;
+  }
+}
+
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1320px !important;
+    }
+
+  }
+  @media (min-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+      }
+      .col-md-4{
+        flex: 0 0 auto;
+        width: 33.3333%;
+      }
+      .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+      }
+}
+
+@media (max-width: 992px) {
+  .searchBar{
+      width: 100%!important;
+  }
+
+  .navBarImg{
+      flex: 0 0 auto;
+      width: 50%;
+      text-align: center;
+  }
+  .navSearchBar{
+      flex: 0 0 auto;
+      width: 100%;
+      justify-content: center;
+  }
+  .navIcons{
+      flex: 0 0 auto;
+      width: 100%;
+      justify-content: center;
+  }
+}
+@media (max-width: 992px) {
+  .navMenuIcon{
+      display: block !important;
+      color: white;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .header-ctn .menu-toggle {
+    display: inline-block;
+  }
+}

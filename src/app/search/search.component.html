@@ -1,0 +1,84 @@
+<section class="container NewArtSection">
+  <div style="margin-top: 70px;" class="col-md-12">
+    <h4>art search</h4>
+    <div class="d-flex">
+      <div class="products-tabs" style="width: 100%">
+        <div id="tab1" class="tab-pane active">
+          <div
+            class="products-slick d-flex"
+            id="displayProducts"
+            data-nav="#slick-nav-1"
+          >
+
+            <div  *ngFor="let i of values" style="padding: 0px 5px" class="col-md-4">
+
+              <div *ngIf="!selected" class="product">
+                <div class="product-img">
+                  <ng-template [ngIf]="i['image']" [ngIfElse]="elseBlock">
+                  <img
+                    style="width: 421.33px; height: 450px"
+                    src="{{ i['image'] }}"
+                    alt=""
+                  />
+                </ng-template>
+                  <ng-template #elseBlock>
+                  <img
+                  style="width: 421.33px; height: 450px"
+                  src="../../assets/src/img/img not avalibale.png"
+
+
+                  alt=""
+                />
+              </ng-template>
+
+                </div>
+                <div
+                  class="product-body"
+                  style="background-color: #1e1f29 !important"
+                >
+
+                  <p class="product-category">{{ i['description'] }}</p>
+                  <h3 class="product-name">
+                    <a href="#"> {{ i['name'] }}</a>
+                  </h3>
+                  <h4 class="product-price text">
+                    {{ i['price'] }}
+                  </h4>
+                  <div class="product-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <div class="product-btns">
+                    <button class="add-to-wishlist">
+                      <i class="fa fa-heart-o"></i
+                      ><span class="tooltipp">add to wishlist</span>
+                    </button>
+                    <button class="add-to-compare">
+                      <i class="fa fa-exchange"></i
+                      ><span class="tooltipp">add to compare</span>
+                    </button>
+                    <button class="quick-view">
+                      <i class="fa fa-eye"></i
+                      ><span class="tooltipp">quick view</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="add-to-cart" >
+                  <button  class="add-to-cart-btn" (click)="addToCartFunction(i)">
+                    <i class="fa fa-shopping-cart"></i> add to cart
+                  </button>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div id="slick-nav-1" class="products-slick-nav"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

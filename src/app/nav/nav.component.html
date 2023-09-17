@@ -1,0 +1,82 @@
+<div class="secondaryNav" >
+  <div class="firstNav">
+    <nav class="container ">
+        <div  class="d-flex" style="justify-content: space-between; align-items: center;">
+            <div>
+                <ul class="navBarList">
+                    <li class="navLink" routerLink="">home</li>
+                    <li class="navLink" routerLink="checkout"> checkout</li>
+                    <li *ngIf="admin" class="navLink" routerLink="products"> products</li>
+                </ul>
+            </div>
+            <div>
+
+                <ul class="navBarList">
+                    <li class="navBarListRightLi">
+                      <ng-template [ngIf]="!loggedIn">
+                        <span><i class="fa fa-user" style="margin-right: 3px;"></i></span>
+                        <a routerLink="register"  class="navLink" id="loginLink" style="margin-left: 10px; color: white;">Register</a>
+                        <a routerLink="login"  class="navLink" id="loginLink" style="margin-left: 10px; color: white;">Login</a>
+                      </ng-template>
+                      <ng-template [ngIf]="loggedIn">
+                        <span><i class="fa fa-user" style="margin-right: 3px;"></i></span>
+                        <span>Hello :{{name}}</span>
+                        <a (click)="logout()" class="navLink" id="loginLink" style="margin-left: 10px; color: white;">Login out</a>
+                      </ng-template>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+  </div>
+  <nav class="container">
+      <div class="d-flex" >
+          <div class="col-md-3 navBarImg">
+             <h1 class="navBarHeading" routerLink="/">art gallary</h1>
+          </div>
+          <div class="col-md-6 searchBar">
+              <div style=" width: 100%; " class="header-search">
+                  <form >
+
+
+
+                        <input style="display: inline-block;" (keyup)="onKey($event)" #Search class="input" placeholder="Search here">
+
+                        <button
+                            style="display: inline-block;margin-left:-4px;" type="button"  [routerLink]="['/search', Search.value]"  class="search-btn">Search</button>
+
+                  </form>
+              </div>
+          </div>
+
+          <div style=" position: relative;" class="col-md-3 navIcons">
+              <div  class="d-flex NavIconsLeft">
+                  <div style="text-align: center;" class="NavIcons"><i style="margin-bottom: 5px;" class="fa fa-heart ">
+                      <span id="wishListNumberId" >0</span>
+                      </i>
+                      <div >Your Wishlist</div>
+                  </div>
+                  <div routerLink="cart" style="text-align: center;"  class="NavIcons">
+                      <div onclick="cartPopUp()">
+
+                        <i style="margin-bottom: 5px;color: white;" class="fa fa-cart-plus">
+
+                          <span id="cartNumberId" >
+                            {{ dataArrayLength }}
+                          </span> </i>
+
+                      <div >Your cart</div>
+                  </div>
+                      <div id="popUp" >
+
+
+                      </div>
+                      </div>
+
+              </div>
+          </div>
+</div>
+        </nav>
+
+</div>

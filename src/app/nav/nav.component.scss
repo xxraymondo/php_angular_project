@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Lobster";
+  src: local("Lobster"), url(../../assets/fonts/Lobster/Lobster-Regular.ttf) format("truetype");
+}
+@import "../shared/sharedVaribales.scss";
+
+.navBarHeading{
+  font-family: 'Lobster','lato', 'arial', sans-serif;
+  cursor: pointer;
+
+  color: $red;
+}
+.navLink:hover{
+  cursor: pointer;
+    color: #ffa3b1;
+    text-shadow: 0px 0px 20px  #fe798d;
+
+}
+.navBarHeading:hover{
+  color: #fe798d;
+  text-shadow: 0px 0px 20px #fe798d;
+}
+#wishListNumberId{
+  margin-left: 3px;
+}
+#cartNumberId{
+  margin-left: 3px;
+}
+
+// firstNav
+.firstNav{
+  margin: 0px!important;
+  padding-top: 0px;
+  background-color: #0a0b0ee1;
+}
+.nav>li {
+  position: relative;
+  display: block;
+}
+.d-flex div ul{
+padding-left: 0px;
+padding-right: 0px;
+}
+.loginNav{
+  position: fixed;
+}
+.navBarList{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px!important;
+}
+.navBarList li{
+  list-style: none;
+  padding-right: 50px ;
+}
+.navBarListRightLi{
+
+padding-right: 0px!important;
+}
+.rightSideOfNav{
+  float: left; position: absolute;right: 0px;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.navBarList li{
+color: white;
+}
+
+.secondaryNav {
+
+  background-color: #15161de1;
+
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.NavIcons{
+  font-size: 0.8rem;
+  color: white !important;
+}
+.NavIcons i span{
+  border: red 1px solid ;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 10px;
+  padding: 5px;
+  color: white !important;
+  margin: 2px;
+}
+.menu-toggle {
+display: none;
+}
+
+.redLine{
+  height: 3px;
+  background-color: red;
+}
+.navMenu{
+  background: #FFF;
+  border-bottom: 2px solid #E4E7ED;
+}
+.navBarList{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px!important;
+}
+.navBarListRightLi{
+
+  padding-right: 0px!important;
+}

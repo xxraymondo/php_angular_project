@@ -1,0 +1,29 @@
+  <!-- /BREADCRUMB -->
+  <section class="login">
+    <div class="login-box ">
+
+      <h1>Login</h1>
+      <form id="loginForm" [formGroup]="registerForm" (ngSubmit)="getFormData(registerForm)">
+        <div class="form-div">
+          <label for="name">Name:</label>
+          <input formControlName="name" class="form-control" type="text" id="name" name="name" required>
+        </div>
+      <div class="form-div">
+        <label for="email">Email:</label>
+        <input class="form-control" formControlName="email" type="email" id="email" name="email" required>
+      </div>
+      <div class="password-input form-div">
+        <label for="password">Password:</label>
+        <input type="password" formControlName="password" class="form-control" #password name="password" required>
+      </div>
+
+      <div class="form-div">
+        <label for="password_confirmation">Password Confirmation:</label>
+        <input class="form-control" formControlName="password_confirmation"  type="password" #password_confirmation name="password_confirmation" required>
+      </div>
+      <button class="btn login-btn"  type="submit">Register</button>
+      </form>
+
+    </div>
+    </section>
+

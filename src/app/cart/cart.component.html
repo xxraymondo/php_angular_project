@@ -1,0 +1,70 @@
+<section class="container NewArtSection">
+  <div style="margin-top: 70px;" class="col-md-12">
+    <h4>art cart</h4>
+    <div class="d-flex">
+      <div class="products-tabs" style="width: 100%">
+        <div id="tab1" class="tab-pane active">
+          <div
+            class="products-slick d-flex"
+            id="displayProducts"
+            data-nav="#slick-nav-1"
+          >
+            <div  *ngFor="let i of dataArr" style="padding: 0px 5px" class="col-md-4">
+
+              <div class="product">
+
+                <div
+                  class="product-body"
+                  style="background-color: #1e1f29 !important"
+                >
+
+
+                  <h3 class="product-name">
+                    <a href="#"> {{ i['name'] }}</a>
+                  </h3>
+                  <h4 class="product-price text">
+                    quantity : {{ i['product_quantity'] }}
+                  </h4>
+
+
+                </div>
+
+                <div class="add-to-cart" >
+                  <button (click)="deleteCartItem(i.id)" class="add-to-cart-btn" style="width: 100%; margin-bottom:10px ;" >
+                    <i class="fa fa-shopping-cart"></i> delete cart item
+                  </button>
+                  <button (click)="increaseCartItem(i.id)" class="add-to-cart-btn" >
+                    <i class="fa fa-shopping-cart"></i> +
+                  </button>
+                  <button (click)="decreaseCartItem(i)" class="add-to-cart-btn" >
+                    <i class="fa fa-shopping-cart"></i> -
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex " style="justify-content: space-around; width: 100%;">
+              <div style="padding-top: 50px;">
+                <h2>total:{{ total }}</h2>
+              </div>
+              <div style="padding-top: 50px;">
+                <button (click)="delCartFunction()" class="cart-add-to-cart-btn" >
+
+                  <i class="fa fa-shopping-cart"></i> delete cart
+                </button>
+              </div>
+              <div style="padding-top: 50px;">
+                <button routerLink="/checkout" class="cart-add-to-cart-btn" >
+
+                  <i class="fa fa-shopping-cart"></i> checkout
+                </button>
+              </div>
+            </div>
+
+          </div>
+          <div id="slick-nav-1" class="products-slick-nav"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
