@@ -1,3 +1,7 @@
+IMPORTANT NOTE
+ADMIN PANEL AND PRODUCT MODEL ARE NOT FINISHED IN FRONT END, Plese install ALLOW CROS browser extenstion
+https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
+
 # AngularPhpProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
